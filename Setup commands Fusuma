@@ -1,0 +1,33 @@
+swipe:
+  3:
+    left:
+      command: "xdotool key alt+Left" # History forward browser
+    right:
+      command: "xdotool key alt+Right" # History back browser
+    up:
+      command: "xdotool key Ctrl+Tab" # Change tab forward
+    down:
+      command: "xdotool key Shift+Ctrl+Tab" # Change tab backward
+  4:
+    left:
+      command: "xdotool key Super+Left" # Window to the left
+    right:
+      command: "xdotool key Super+Right" # Window to the right
+    up:
+      command: "xdotool key Alt+F7" # Maximize window
+    down:
+      command: "xdotool key Alt+Space" # Application menu
+
+pinch:
+  in:
+    command: "xdotool keydown ctrl click 4 keyup ctrl" # Zoom in
+    threshold: 0.1
+  out:
+    command: "xdotool keydown ctrl click 5 keyup ctrl" # Zoom out
+    threshold: 0.1
+
+threshold:
+  swipe: 0.5
+  
+interval:
+  swipe: 0.5
