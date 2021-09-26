@@ -1,0 +1,104 @@
+sudo apt update
+# INSTALAR XFCE GOODIES (XUBUNTU)
+	sudo apt-get update && sudo apt-get install xfce4 xfce4-goodies
+	sudo apt-get install gnome-disk-utility 
+	sudo apt-get install synaptic      # 'apt' package manager
+	sudo apt install gedit             # editor texto
+
+# INSTALAR R E RSTUDIO (20.04)
+	sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+	sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
+	sudo apt update
+	sudo apt install r-base
+
+	wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.4.1717-amd64.deb
+	sudo gdebi -n rstudio-1.4.1717-amd64.deb
+	rm rstudio-1.4.1717-amd64.deb
+	
+	sudo apt-get install libxml2-dev
+	sudo apt-get install libcurl4-openssl-dev 
+	sudo apt-get install libssl-dev
+	# sudo apt-get install libmariadb-client-lgpl-dev
+	sudo apt-get install libpq-dev
+	# sudo apt-get build-dep r-base-core
+	sudo apt-get install libfontconfig1-dev
+	sudo apt-get install libudunits2-dev
+	sudo apt-get install libmagick++-dev
+	sudo apt-get install cargo
+	sudo apt install libgdal-dev
+	sudo apt install libv8-dev
+	sudo apt install libgsl-dev
+	sudo apt-get install libglpk-dev
+
+# GIT 
+	sudo apt install git
+
+# DOCKER
+	sudo apt-get install apt-transport-https
+	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+	sudo apt-get update
+	sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+# INSTALAR WEBCAM VIEW
+	sudo apt-get install guvcview
+
+
+# INSTALAR CHROME
+	https://www.google.com/chrome/browser/desktop/index.html
+	sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+	# SPOTIFY
+	sudo apt install curl
+	curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
+	echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+	sudo apt-get update && sudo apt-get install spotify-client
+
+
+# YOUTUBE-DL (BAIXAR VÍDEOS YOUTUBE)
+	sudo apt install python3-pip
+	sudo pip3 install --upgrade youtube-dl
+
+# GNOME SYSTEM MONITOR
+	sudo apt-get install gnome-system-monitor
+
+# SCREEN RECORDER
+	sudo apt-get install simplescreenrecorder
+
+# FUSUMA (GESTOS TOUCHPAD)
+	sudo apt-get install libinput-tools
+	sudo apt-get install ruby
+	sudo gem install fusuma
+	sudo gem install fusuma-plugin-tap
+	sudo apt-get install xdotool
+
+	mkdir -p ~/.config/fusuma              # create config directory
+	nano ~/.config/fusuma/config.yml       # edit config file (use settings on file 'Setup Commands Fusuma')
+	# BROWSE KEYS ON: Settings > Window Manager > Keyboard (available actions and shortcuts)
+	# OPEN: Session and Startup > Include command config.yml -d # (-d to run in daemon, not open terminal)
+
+# POKERSTARS (PRECISA ESTAR COM DRIVER DE VÍDEO XORG, NVIDIA DÁ PROBLEMA)
+	sudo apt install wine64 wine32
+	wget -c http://www.pokerstars.com/PokerStarsInstall.exe
+	wine PokerStarsInstall.exe
+
+	
+# PROGRAMAS PRA INSTALAR PELO "UBUNTU SOFTWARE"
+	# VLC
+		sudo apt-get install vlc
+	# GLIMPSE
+		sudo apt-get install glimpse
+	# LIBREOFFICE	
+		sudo apt-get install libreoffice
+	# CALIBRE
+		sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
+	# NORDVPN
+		# https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn-release_1.0.0_all.deb
+		sudo dpkg -i nordvpn-release_1.0.0_all.deb
+		sudo apt update
+		sudo apt install nordvpn 
+	
+	
+# AJUSTE ORIENTAÇÃO
+sudo apt install arandr
+
+	
